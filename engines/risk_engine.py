@@ -270,7 +270,7 @@ def _signal_eps_var_3yr(row):
         return 0, ""
     
 
-    # COMPOSITE RISK FLAGS
+# COMPOSITE RISK FLAGS
 # These are additional checks that look at combinations
 # of signals to catch situations individual signals miss.
 # They do not add to the 0-100 score but appear in reasons.
