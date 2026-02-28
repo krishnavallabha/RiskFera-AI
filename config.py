@@ -24,6 +24,17 @@ INNOVATECH = {
 
     # Risk profile
     "risk_appetite":         "moderate",
+    #Signal weights (based on real dataset analysis):
+    "risk_signal_maxpts": {
+    "quarterly_profit_var":  20,   
+    "profit_var_3yr":        30,   
+    "ebitda_var_3yr":        25,
+    "operating_margin":      15,
+    "dividend_yield":         5,
+    "eps_var_3yr":            5,
+},
+#   Total                           : max 100 pts
+#
 
     # ── Synergy Engine Benchmarks ────────────────────────────────────────────
     # Targets are scored relative to these InnovaTech benchmarks.
@@ -45,6 +56,14 @@ INNOVATECH = {
         "sector_fit":    0.20,   # Strategic alignment with InnovaTech's goals
         "eps_momentum":  0.10,   # Quality of earnings signal
     },
+    #Signal weights for feasibility engine:
+    "feasibility_signal_maxpts": {
+    "budget_check":        40,   # Signal 1 — mar_cap_rscr × 1.25 vs ₹180Cr
+    "pe_attractiveness":   25,   # Signal 2 — p_e vs 24.5x
+    "equity_dilution":     20,   # Signal 3 — calculated from mar_cap_rscr
+    "integration":         15,   # Signal 4 — 3yrs_return
+},
+#   Total                      : 100 pts
 
     # ── Final Score Weights ──────────────────────────────────────────────────
     # Risk carries highest weight — moderate risk appetite means quality gate first.
