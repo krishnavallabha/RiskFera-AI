@@ -99,7 +99,7 @@ def compute_final_score(risk, synergy, feasibility, weights):
 # ============================================================
 
 def run_model(
-    input_path  = 'data/cleaned_targets.csv',
+    input_path  = 'dataset/cleaned_targets.csv',
     output_path = 'output/ranked_targets.csv'
 ):
     """

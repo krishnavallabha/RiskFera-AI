@@ -7,8 +7,8 @@
 #   python data_loader.py
 #
 # OUTPUTS:
-#   data/cleaned_targets.csv
-#   data/column_map.txt
+#   dataset/cleaned_targets.csv
+#   dataset/column_map.txt
 # ============================================================
 
 import pandas as pd
@@ -41,10 +41,10 @@ import sys
 # ============================================================
 
 
-def load_raw(path='data/dataset.csv'):
+def load_raw(path='dataset/dataset.csv'):
     if not os.path.isfile(path):
         print(f"ERROR: File not found: {path}")
-        print("Place dataset.csv inside the data/ folder and re-run.")
+        print("Place dataset.csv inside the dataset/ folder and re-run.")
         sys.exit(1)
     try:
         df = pd.read_csv(path, encoding='latin-1')
@@ -71,14 +71,14 @@ def clean_column_names(df):
 
     cleaned = df.columns.tolist()
 
-    os.makedirs('data', exist_ok=True)
-    with open('data/column_map.txt', 'w', encoding='utf-8') as f:
+    os.makedirs('dataset', exist_ok=True)
+    with open('dataset/column_map.txt', 'w', encoding='utf-8') as f:
         f.write("ORIGINAL COLUMN NAME                          ->  CLEANED NAME\n")
         f.write("=" * 75 + "\n")
         for orig, clean in zip(original, cleaned):
             f.write(f"{orig:<45}  ->  {clean}\n")
 
-    print(f"Column map saved -> data/column_map.txt")
+    print(f"Column map saved -> dataset/column_map.txt")
     print(f"{len(cleaned)} columns standardized")
     return df
 
@@ -181,7 +181,7 @@ def print_summary(df):
     print("=" * 55)
 
 
-def load_and_clean(path='data/dataset.csv'):
+def load_and_clean(path='dataset/dataset.csv'):
     print()
     print("=" * 55)
     print("RISKFERA AI - Data Loader (M2)")
@@ -203,7 +203,7 @@ def load_and_clean(path='data/dataset.csv'):
 
     print_summary(df)
 
-    out = 'data/cleaned_targets.csv'
+    out = 'dataset/cleaned_targets.csv'
     df.to_csv(out, index=False)
     print(f"\nSaved: {out} ({len(df)} rows x {len(df.columns)} columns)")
 
@@ -239,5 +239,5 @@ def load_and_clean(path='data/dataset.csv'):
 
 
 if __name__ == '__main__':
-    path = sys.argv[1] if len(sys.argv) > 1 else 'data/dataset.csv'
+    path = sys.argv[1] if len(sys.argv) > 1 else 'dataset/dataset.csv'
     load_and_clean(path=path)

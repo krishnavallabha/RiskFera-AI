@@ -3,18 +3,18 @@ ORIGINAL COLUMN NAME                          ->  CLEANED NAME
 S.No.                                          ->  sno
 Name                                           ->  name
 P/E                                            ->  p_e
-Mar Cap Rs.Cr.                                 ->  mar_cap_rscr
-Div Yld %                                      ->  div_yld
-NP Qtr Rs.Cr.                                  ->  np_qtr_rscr
-Qtr Profit Var %                               ->  qtr_profit_var
-Sales Qtr Rs.Cr.                               ->  sales_qtr_rscr
-Qtr Sales Var %                                ->  qtr_sales_var
-ROCE %                                         ->  roce
-OPM %                                          ->  opm
-Sales Var 3Yrs %                               ->  sales_var_3yrs
-Profit Var 3Yrs %                              ->  profit_var_3yrs
-3Yrs return %                                  ->  3yrs_return
-ROE 3Yr %                                      ->  roe_3yr
-EBIDT Var 3Yrs %                               ->  ebidt_var_3yrs
-EPS Var 3Yrs %                                 ->  eps_var_3yrs
+Mar CapÂ Rs.Cr.Â                               ->  mar_cap_rscr
+Div YldÂ %                                     ->  div_yld
+NP QtrÂ Rs.Cr.                                 ->  np_qtr_rscr
+Qtr Profit VarÂ %                              ->  qtr_profit_var
+Sales QtrÂ Rs.Cr.                              ->  sales_qtr_rscr
+Qtr Sales VarÂ %                               ->  qtr_sales_var
+ROCEÂ %                                        ->  roce
+OPMÂ %                                         ->  opm
+Sales Var 3YrsÂ %                              ->  sales_var_3yrs
+Profit Var 3YrsÂ %                             ->  profit_var_3yrs
+3Yrs returnÂ %                                 ->  3yrs_return
+ROE 3YrÂ %                                     ->  roe_3yr
+EBIDT Var 3YrsÂ %                              ->  ebidt_var_3yrs
+EPS Var 3YrsÂ %                                ->  eps_var_3yrs
 Sector                                         ->  sector
